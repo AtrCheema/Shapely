@@ -8,7 +8,7 @@ These methods return ctypes objects that should be recast by the caller.
 """
 
 from ctypes import byref, c_double
-from shapely.geos import TopologicalError, lgeos
+from private_tools.Shapely.shapely.geos import TopologicalError, lgeos
 
 
 class Validating(object):

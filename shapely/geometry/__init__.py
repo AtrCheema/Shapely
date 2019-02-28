@@ -20,4 +20,4 @@ __all__ = [
 ]
 
 # This needs to be called here to avoid circular references
-import shapely.speedups
+import private_tools.Shapely.shapely.speedups

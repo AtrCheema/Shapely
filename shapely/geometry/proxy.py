@@ -1,8 +1,8 @@
 """Proxy for coordinates stored outside Shapely geometries
 """
 
-from shapely.geometry.base import EMPTY
-from shapely.geos import lgeos
+from private_tools.Shapely.shapely.geometry.base import EMPTY
+from private_tools.Shapely.shapely.geos import lgeos
 
 
 class CachingGeometryProxy(object):

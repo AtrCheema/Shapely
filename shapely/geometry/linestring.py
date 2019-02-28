@@ -8,12 +8,12 @@ if sys.version_info[0] < 3:
 
 from ctypes import c_double
 
-from shapely.geos import lgeos, TopologicalError
-from shapely.geometry.base import (
+from private_tools.Shapely.shapely.geos import lgeos, TopologicalError
+from private_tools.Shapely.shapely.geometry.base import (
     BaseGeometry, geom_factory, JOIN_STYLE, geos_geom_from_py
 )
-from shapely.geometry.proxy import CachingGeometryProxy
-from shapely.geometry.point import Point
+from private_tools.Shapely.shapely.geometry.proxy import CachingGeometryProxy
+from private_tools.Shapely.shapely.geometry.point import Point
 
 __all__ = ['LineString', 'asLineString']
 

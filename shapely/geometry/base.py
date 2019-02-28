@@ -14,12 +14,14 @@ import sys
 from warnings import warn
 from functools import wraps
 
-from shapely.affinity import affine_transform
-from shapely.coords import CoordinateSequence
-from shapely.errors import WKBReadingError, WKTReadingError
-from shapely.geos import WKBWriter, WKTWriter
-from shapely.geos import lgeos
-from shapely.impl import DefaultImplementation, delegated
+from private_tools.Shapely.shapely.affinity import affine_transform
+from private_tools.Shapely.shapely.coords import CoordinateSequence
+from private_tools.Shapely.shapely.errors import WKBReadingError, WKTReadingError
+from private_tools.Shapely.shapely.geos import WKBWriter, WKTWriter
+from private_tools.Shapely.shapely.geos import lgeos
+from private_tools.Shapely.shapely.impl import DefaultImplementation, delegated
+
+from private_tools.pyshp import shapefile
 
 
 if sys.version_info[0] < 3:

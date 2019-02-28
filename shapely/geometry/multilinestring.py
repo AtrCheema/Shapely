@@ -8,10 +8,10 @@ if sys.version_info[0] < 3:
 
 from ctypes import c_void_p, cast
 
-from shapely.geos import lgeos
-from shapely.geometry.base import BaseMultipartGeometry, geos_geom_from_py
-from shapely.geometry import linestring
-from shapely.geometry.proxy import CachingGeometryProxy
+from private_tools.Shapely.shapely.geos import lgeos
+from private_tools.Shapely.shapely.geometry.base import BaseMultipartGeometry, geos_geom_from_py
+from private_tools.Shapely.shapely.geometry import linestring
+from private_tools.Shapely.shapely.geometry.proxy import CachingGeometryProxy
 
 __all__ = ['MultiLineString', 'asMultiLineString']
 

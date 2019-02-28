@@ -13,13 +13,13 @@ Shapely 1.2 includes a GEOS backend and it is the default.
 
 from functools import wraps
 
-from shapely.algorithms import cga
-from shapely.coords import BoundsOp
-from shapely.geos import lgeos
-from shapely.linref import ProjectOp, InterpolateOp
-from shapely.predicates import BinaryPredicate, UnaryPredicate
-from shapely.topology import BinaryRealProperty, BinaryTopologicalOp
-from shapely.topology import UnaryRealProperty, UnaryTopologicalOp
+from private_tools.Shapely.shapely.algorithms import cga
+from private_tools.Shapely.shapely.coords import BoundsOp
+from private_tools.Shapely.shapely.geos import lgeos
+from private_tools.Shapely.shapely.linref import ProjectOp, InterpolateOp
+from private_tools.Shapely.shapely.predicates import BinaryPredicate, UnaryPredicate
+from private_tools.Shapely.shapely.topology import BinaryRealProperty, BinaryTopologicalOp
+from private_tools.Shapely.shapely.topology import UnaryRealProperty, UnaryTopologicalOp
 
 
 class ImplementationError(

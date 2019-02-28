@@ -3,10 +3,10 @@
 
 from ctypes import c_double
 
-from shapely.errors import DimensionError
-from shapely.geos import lgeos
-from shapely.geometry.base import BaseGeometry, geos_geom_from_py
-from shapely.geometry.proxy import CachingGeometryProxy
+from private_tools.Shapely.shapely.errors import DimensionError
+from private_tools.Shapely.shapely.geos import lgeos
+from private_tools.Shapely.shapely.geometry.base import BaseGeometry, geos_geom_from_py
+from private_tools.Shapely.shapely.geometry.proxy import CachingGeometryProxy
 
 __all__ = ['Point', 'asPoint']
 

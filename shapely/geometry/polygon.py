@@ -9,12 +9,12 @@ if sys.version_info[0] < 3:
 from ctypes import c_void_p, cast, POINTER
 import weakref
 
-from shapely.algorithms.cga import signed_area
+from private_tools.Shapely.shapely.algorithms.cga import signed_area
 #from shapely.coords import required
-from shapely.geos import lgeos
-from shapely.geometry.base import BaseGeometry, geos_geom_from_py
-from shapely.geometry.linestring import LineString, LineStringAdapter
-from shapely.geometry.proxy import PolygonProxy
+from private_tools.Shapely.shapely.geos import lgeos
+from private_tools.Shapely.shapely.geometry.base import BaseGeometry, geos_geom_from_py
+from private_tools.Shapely.shapely.geometry.linestring import LineString, LineStringAdapter
+from private_tools.Shapely.shapely.geometry.proxy import PolygonProxy
 
 __all__ = ['Polygon', 'asPolygon', 'LinearRing', 'asLinearRing']
 

@@ -1,7 +1,7 @@
 """Linear referencing
 """
 
-from shapely.topology import Delegating
+from private_tools.Shapely.shapely.topology import Delegating
 
 
 class LinearRefBase(Delegating):

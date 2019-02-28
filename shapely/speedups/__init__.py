@@ -1,9 +1,9 @@
 import warnings
 from functools import wraps
 
-from shapely.geometry import linestring, polygon
-from shapely import coords
-import shapely.affinity
+from private_tools.Shapely.shapely.geometry import linestring, polygon
+from private_tools.Shapely.shapely import coords
+import private_tools.Shapely.shapely.affinity
 
 
 try:
