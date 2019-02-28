@@ -431,6 +431,37 @@ class BaseGeometry(object):
         """Unitless area of the geometry (float)"""
         return self.impl['area'](self)
 
+    def find_records(self, record_name, feature_number):
+        '''find the metadata about feature given its feature number and column_name which contains the data'''
+        name = None
+        #print('the opened file is: ', self.ShapeFile_Name)
+        #recs = shapefile.Reader(self.ShapeFile_Name).shapeRecords()
+        setattr(self, 'lu_shapefile', shapefile.Reader(self.ShapeFile_Name))
+        col_no = self.find_col_name(record_name)
+        
+        if col_no == -99: print('no column name found')
+        else:
+            #print(col_no, 'is the col no')
+            name = self.get_record_in_col(feature_number, col_no)
+        return name
+
+
+    def find_col_name(self, field_name):
+        _col_no = 0
+        col_no = -99
+        for fields in self.lu_shapefile.fields:
+            _col_no +=1
+            for field in fields:
+                if field == field_name:
+                    col_no = _col_no
+                    break
+        return col_no
+
+    def get_record_in_col(self, i, col_no):
+        recs = self.lu_shapefile.records()
+        col_no = col_no - 2  #-2, 1 for index reduction, 1 for a junk column shows up in records
+        return recs[i][col_no]
+
     def distance(self, other):
         """Unitless distance to other geometry (float)"""
         return self.impl['distance'](self, other)
