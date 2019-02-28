@@ -14,6 +14,8 @@ import sys
 from warnings import warn
 from functools import wraps
 
+supp = 'private_tools.Shapely.'
+
 from private_tools.Shapely.shapely.affinity import affine_transform
 from private_tools.Shapely.shapely.coords import CoordinateSequence
 from private_tools.Shapely.shapely.errors import WKBReadingError, WKTReadingError
@@ -80,7 +82,7 @@ def geom_factory(g, parent=None):
     geom_type = geometry_type_name(g)
     # TODO: check cost of dynamic import by profiling
     mod = __import__(
-        'shapely.geometry',
+        supp+'shapely.geometry',
         globals(),
         locals(),
         [geom_type],

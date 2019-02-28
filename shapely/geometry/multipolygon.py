@@ -29,7 +29,7 @@ class MultiPolygon(BaseMultipartGeometry):
         A sequence of `Polygon` instances
     """
 
-    def __init__(self, polygons=None, context_type='polygons'):
+    def __init__(self, polygons=None, context_type='polygons', ShapeFile_Name=None):
         """
         Parameters
         ----------
@@ -54,6 +54,8 @@ class MultiPolygon(BaseMultipartGeometry):
           True
         """
         super(MultiPolygon, self).__init__()
+
+        self.ShapeFile_Name=ShapeFile_Name
 
         if not polygons:
             # allow creation of empty multipolygons, to support unpickling

@@ -35,13 +35,13 @@ def shape(context):
         if not ob["coordinates"]:
             return Polygon()
         else:
-            return Polygon(ob["coordinates"][0], ob["coordinates"][1:])
+            return Polygon(ob["coordinates"][0], ob["coordinates"][1:], ShapeFile_Name=ob['ShapeFile_Name'])
     elif geom_type == "multipoint":
         return MultiPoint(ob["coordinates"])
     elif geom_type == "multilinestring":
         return MultiLineString(ob["coordinates"])
     elif geom_type == "multipolygon":
-        return MultiPolygon(ob["coordinates"], context_type='geojson')
+        return MultiPolygon(ob["coordinates"], context_type='geojson', ShapeFile_Name=ob['ShapeFile_Name'])
     elif geom_type == "geometrycollection":
         geoms = [shape(g) for g in ob.get("geometries", [])]
         return GeometryCollection(geoms)

@@ -214,7 +214,7 @@ class Polygon(BaseGeometry):
     _interiors = []
     _ndim = 2
 
-    def __init__(self, shell=None, holes=None):
+    def __init__(self, shell=None, holes=None, ShapeFile_Name=None):
         """
         Parameters
         ----------
@@ -242,6 +242,8 @@ class Polygon(BaseGeometry):
             else:
                 self.empty()
 
+        self.ShapeFile_Name = ShapeFile_Name
+        
     @property
     def exterior(self):
         if self.is_empty:
